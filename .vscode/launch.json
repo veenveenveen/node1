@@ -1,0 +1,167 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run mvcKoa.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/mvc_koa/mvcKoa.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}/mvc_koa",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
+        },
+        {
+            "name": "Run nunjucksMain.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/use_nunjucks/nunjucksMain.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}/use_nunjucks",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
+        },
+        {
+            "name": "Run koaMain.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/use_koa/koaMain.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}/use_koa",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
+        },
+        {
+            "name": "Run koa.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/koa.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
+        },
+        {
+            "name": "Run crypto.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/crypto.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
+        },
+        {
+            "name": "Run file_server.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/file_server.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
+        },
+        {
+            "name": "Run http.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/http.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
+        },
+        {
+            "name": "Run test.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/test.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
+        },
+        {
+            "name": "Run hello.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/hello.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
+        }
+    ]
+}
