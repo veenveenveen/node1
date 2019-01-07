@@ -2,9 +2,9 @@
 var fn_signin = async (ctx, next) => {
     var username = ctx.request.body.username || '';
     var password = ctx.request.body.password || '';
-    console.log(`signin with name: ${name}, password: ${password}`);
+    console.log(`signin with name: ${username}, password: ${password}`);
 
-    if (name === 'himin' && password === '123456') {
+    if (username === 'himin' && password === '123456') {
         // 登录成功
         ctx.render('signinOk.html',{
             title: 'Sign In Ok',
