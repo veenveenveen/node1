@@ -34,5 +34,9 @@ app.use(rest.restify());
 // add controllers:
 app.use(controller());
 
+app.use(async (ctx, next) => {
+    ctx.response.redirect('/static/index.html');
+});
+
 app.listen(3000);
 console.log('app started at port 3000...');
