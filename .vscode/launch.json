@@ -2,6 +2,24 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Run excelMain.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/vue_excel/excelMain.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}/vue_excel",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
+        },
+        {
             "name": "Run todoMain.js",
             "type": "node",
             "request": "launch",
