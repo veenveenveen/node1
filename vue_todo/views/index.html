@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="learn javascript by www.liaoxuefeng.com">
+    <title>Vue</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/vue.js"></script>
+    <script>
+        $(function () {
+            var vm = new Vue({
+                el: '#vm',
+                data: {
+                    name: 'Robot',
+                    age: 15
+                }
+            });
+            window.vm = vm;
+
+            var vm2 = new Vue({
+                el: '#vm2',
+                data: {
+                    email: '',
+                    user: '',
+                    language: ['zh', 'en'],
+                    subscribe: true,
+                    city: '',
+                    todos: [
+                        {
+                            name: '产品评审',
+                            description: '新款iPhone上市前评审'
+                        },
+                        {
+                            name: '开发计划',
+                            description: '与PM确定下一版Android开发计划'
+                        },
+                        {
+                            name: 'VC会议',
+                            description: '敲定C轮5000万美元融资'
+                        }
+                    ]
+                },
+                methods: {
+                    register: function () {
+                        // 显示JSON格式的Model:
+                        alert(JSON.stringify(this.$data));
+                        // TODO: AJAX POST...
+                    },
+                    add: function () {
+                        this.$data.todos.push({ name: '新计划', description: 'blabla...' });
+                    },
+                    del: function () {
+                        // this.todos.pop();
+                        this.$data.todos.pop();
+                    }
+                }
+            });
+            window.vm2 = vm2;
+        });
+        function executeJs() {
+            try {
+                var code = $('#code').val();
+                var fn = new Function('var vm = window.vm;\n' + code);
+                fn();
+            } catch (e) { }
+            return false;
+        };
+    </script>
+</head>
+
+<body>
+    <div id="important" style="color:#cdbfe3; background-color:#6f5499; padding:30px 0; margin:0 0 20px 0;">
+        <div class="container">
+            <h1 style="color:#fff; font-size:60px">Getting started</h1>
+        </div>
+    </div>
+    <!-- 单向绑定 '{{ }}' -->
+    <div class="container">
+        <div class="panel-body">
+            <div id="vm">
+                <p>Hello, {{ name }}!</p>
+                <p>You are {{ age }} years old!</p>
+            </div>
+            <hr>
+            <h3>Try change the name or age</h3>
+            <form action="#" onsubmit="return executeJs()">
+                <div class="form-group">
+                    <textarea id="code" class="form-control" style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace; resize:none;"
+                        rows="5">vm.name = 'Bob';</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Execute</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <!-- 双向绑定 'v-model' -->
+    <div class="container">
+        <div id="vm2" class="panel-body">
+            <form v-on:submit.prevent="register">
+                <p>email, {{ email }}!</p>
+                <p>user, {{ user }}!</p>
+                <p><input v-model="email"></p>
+                <p><input v-model="user"></p>
+                <hr>
+                <label><input type="checkbox" v-model="language" value="zh"> Chinese</label>
+                <label><input type="checkbox" v-model="language" value="en"> English</label>
+                <label><input type="checkbox" v-model="language" value="fr"> French</label>
+                <hr>
+                <input type="checkbox" v-model="subscribe">
+                <hr>
+                <select v-model="city">
+                    <option value="bj">Beijing</option>
+                    <option value="sh">Shanghai</option>
+                    <option value="gz">Guangzhou</option>
+                </select>
+                <hr>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <hr>
+            <ol>
+                <li v-for="t in todos">
+                    <dl>
+                        <dt>{{ t.name }}</dt>
+                        <dd>{{ t.description }}</dd>
+                    </dl>
+                </li>
+            </ol>
+            <button v-on:click="add" class="btn btn-primary">Add</button>
+            <button v-on:click="del" class="btn btn-primary">Delete</button>
+        </div>
+    </div>
+</body>
+
+</html>

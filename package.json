@@ -12,10 +12,13 @@
     "author": "himin",
     "license": "Apache-2.0",
     "dependencies": {
-        "koa-router": "7.4.0",
         "koa-bodyparser": "4.2.1",
-        "nunjucks": "3.1.6",
+        "koa-router": "7.4.0",
         "mime": "2.4.0",
-        "mz": "2.7.0"
+        "mysql": "^2.16.0",
+        "mz": "2.7.0",
+        "nunjucks": "3.1.6",
+        "sequelize": "3.24.1",
+        "sqlstring": "^2.3.1"
     }
 }

@@ -2,6 +2,60 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Run todoMain.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/vue_todo/todoMain.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}/vue_todo",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
+        },
+        {
+            "name": "Run vueMain.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/use_vue/vueMain.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}/use_vue",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
+        },
+        {
+            "name": "Run mysqlMain.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/mysql/mysqlMain.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}/mysql",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": false,
+        },
+        {
             "name": "Run mvcKoa.js",
             "type": "node",
             "request": "launch",
